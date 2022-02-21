@@ -16,25 +16,21 @@ namespace RobotCleaner.Model
 
         public void Move(string direction, int movements)
         {
-            if (direction == "N")
+            switch (direction)
             {
-                MoveNorth(movements);
-            }
-
-            if (direction == "S")
-            {
-                MoveSouth(movements);
-            }
-
-            if (direction == "W")
-            {
-                MoveWest(movements);
-            }
-
-            if (direction == "E")
-            {
-                MoveEast(movements);
-            }
+                case "N":
+                    MoveNorth(movements);
+                    break;
+                case "S":
+                    MoveSouth(movements);
+                    break;
+                case "W":
+                    MoveWest(movements);
+                    break;
+                case "E":
+                    MoveEast(movements);
+                    break;
+            };        
         }
 
         private void MoveNorth(int movements)
